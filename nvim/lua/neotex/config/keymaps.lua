@@ -118,7 +118,20 @@ function M.setup()
   function _G.set_terminal_keymaps()
     -- Set the terminal window as fixed
     vim.wo.winfixbuf = true
+-- Terminal integration
+-- map("n", "<leader><t>", "<cmd>ToggleTerm<CR>", { remap = true }, "Toggle terminal")
+-- map("t", "<C-t>", "<cmd>ToggleTerm<CR>", { remap = true }, "Toggle terminal")
 
+-- Space leader quick commands for terminal (integrates with which-key menu)
+-- map("n", "<leader>tt", "<cmd>ToggleTerm<CR>", {}, "Toggle Terminal")
+-- map("t", "<leader>tt", "<cmd>ToggleTerm<CR>", {}, "Toggle Terminal")
+
+-- Hide terminal (space + t + h)
+map("n", "<leader>th", "<cmd>ToggleTermHide<CR>", {}, "Hide Terminal")
+map("t", "<leader>th", "<cmd>ToggleTermHide<CR>", {}, "Hide Terminal")
+
+-- New terminal instance (space + t + n, e.g., for second shell)
+map("n", "<leader>tn", "<cmd>2ToggleTerm<CR>", {}, "New Terminal")
     -- Terminal navigation
     buf_map(0, "t", "<esc>", "<C-\\><C-n>", "Exit terminal mode")
     buf_map(0, "t", "<C-h>", "<Cmd>wincmd h<CR>", "Navigate left")

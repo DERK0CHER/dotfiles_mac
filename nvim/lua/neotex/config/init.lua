@@ -21,7 +21,7 @@ local function safe_require(module)
     vim.notify("Failed to load config module: " .. module, vim.log.levels.ERROR)
     return false
   end
-  
+
   if type(result) == "table" and type(result.setup) == "function" then
     local setup_ok, _ = pcall(result.setup)
     if not setup_ok then
@@ -29,7 +29,7 @@ local function safe_require(module)
       return false
     end
   end
-  
+
   return true
 end
 

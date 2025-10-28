@@ -15,8 +15,10 @@
 -----------------------------------------------------------
 
 -- Disable matchit.vim and matchparen right at the start to prevent loading
+vim.env.PATH = "/opt/homebrew/bin:" .. vim.env.PATH
 vim.g.loaded_matchit = 1
 vim.g.loaded_matchparen = 1
+vim.g.python3_host_prog = "Users/beba./.venvs/nvim/lib/python3.13/"
 
 -- Set notification level to show only important messages
 vim.notify_level = vim.log.levels.INFO

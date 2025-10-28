@@ -7,7 +7,7 @@ return {
 
     -- Formatting settings
     -- vim.g.vimtex_format_enabled = true             -- Enable formatting with latexindent
-    -- vim.g.vimtex_format_program = 'latexindent'
+    vim.g.vimtex_format_program = 'latexindent'
 
     -- Indentation settings
     vim.g.vimtex_indent_enabled = false            -- Disable auto-indent from Vimtex
