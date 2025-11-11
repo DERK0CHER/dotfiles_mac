@@ -13,6 +13,7 @@
       system = "aarch64-darwin";
 
       modules = [
+      ./hosts/be.nix
         ./modules/nix.nix
         ./modules/packages.nix
         ./modules/system.nix
