@@ -5,5 +5,6 @@
   # programs.fish.enable = true;
    fonts.packages = with pkgs; [ jetbrains-mono ];
 
+system.stateVersion = 6;
 }
 

@@ -6,6 +6,8 @@
     kitty
     neovim
     vscodium
+    yabai
+    skhd
 
     # Browser
     firefox

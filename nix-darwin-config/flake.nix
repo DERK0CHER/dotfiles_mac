@@ -16,8 +16,8 @@
         ./modules/nix.nix
         ./modules/packages.nix
         ./modules/system.nix
-        # ./modules/services/yabai.nix  # later if you want
-      ];
+  ./modules/yabai-skhd.nix 
+  ];
     };
   };
 }
