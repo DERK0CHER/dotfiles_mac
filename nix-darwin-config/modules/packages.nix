@@ -8,6 +8,9 @@
     vscodium
     yabai
     skhd
+    jq
+    fish
+    protonmail-desktop
 
     # Browser
     firefox
@@ -49,6 +52,20 @@
 
     # LaTeX helper
     python3Packages.pylatexenc
+
+    #for neovim
+        go
+        cargo
+        luarocks
+        ruby
+        php
+        jdk
+        julia-bin
+        phpPackages.composer
+        ghostscript
+        tectonic
+        mermaid-cli
+        (pkgs.python3.withPackages (ps: [ ps.pip ps.venvShellHook ]))
   ];
 }
 

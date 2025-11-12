@@ -17,7 +17,11 @@
         ./modules/nix.nix
         ./modules/packages.nix
         ./modules/system.nix
-  ./modules/yabai-skhd.nix 
+        ./modules/yabai-skhd.nix 
+        ./modules/home.nix
+        ({
+      security.pam.services.sudo_local.touchIdAuth = true;
+})
   ];
     };
   };
