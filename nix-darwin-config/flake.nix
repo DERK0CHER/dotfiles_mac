@@ -18,6 +18,7 @@
         ./modules/packages.nix
         ./modules/system.nix
         ./modules/home.nix
+        ./modules/yabai.nix
         ({
       security.pam.services.sudo_local.touchIdAuth = true;
 })

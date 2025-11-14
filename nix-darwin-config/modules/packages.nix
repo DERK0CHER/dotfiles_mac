@@ -10,6 +10,7 @@
     protonmail-desktop
     yazi
     aerospace
+    yabai
 
     # Browser
     firefox
