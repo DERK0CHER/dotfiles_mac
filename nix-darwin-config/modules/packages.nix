@@ -6,8 +6,6 @@
     kitty
     neovim
     vscodium
-    # yabai
-    jq
     fish
     protonmail-desktop
     yazi
