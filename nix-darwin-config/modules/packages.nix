@@ -6,11 +6,12 @@
     kitty
     neovim
     vscodium
-    yabai
-    skhd
+    # yabai
     jq
     fish
     protonmail-desktop
+    yazi
+    aerospace
 
     # Browser
     firefox
