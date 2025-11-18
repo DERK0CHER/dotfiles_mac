@@ -5,11 +5,10 @@
    programs.fish.enable = true;
     environment.shells = [ pkgs.fish ];
 
+ # Keyboard
    fonts.packages = with pkgs; [ iosevka jetbrains-mono ];
    system.keyboard = {
     enableKeyMapping = true;
-
-    # SimpleCapsLockSwap is one of the built-in presets
     remapCapsLockToEscape = true;
   };
 

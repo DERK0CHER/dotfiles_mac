@@ -12,6 +12,7 @@
     aerospace
     yabai
 
+
     # Browser
     firefox
 
@@ -35,6 +36,9 @@
     gnumake
     nodejs
     pnpm
+    pngpaste
+    ripgrep
+    fd
 
     # Node formatters
     nodePackages.prettier
