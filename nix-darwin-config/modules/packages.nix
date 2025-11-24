@@ -11,6 +11,7 @@
     yazi
     aerospace
     yabai
+    code-cursor
 
 
     # Browser
