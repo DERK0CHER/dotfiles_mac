@@ -12,6 +12,9 @@
     aerospace
     yabai
     code-cursor
+    rename
+    tree
+    obsidian
 
 
     # Browser
