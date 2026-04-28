@@ -2,8 +2,11 @@
 {
   environment.systemPackages = with pkgs; [
     # Editors / Terminals
+    qemu
+android-tools
     vim
     kitty
+    discord
     neovim
     vscodium
     fish
@@ -14,7 +17,11 @@
     code-cursor
     rename
     tree
+texstudio
+texliveTeTeX
     obsidian
+    docker
+    docker-compose
 
 
     # Browser
@@ -27,7 +34,7 @@
     feh
     libnotify
     ttfautohint
-
+rPackages.rosetta
     # Communication / Mail / etc.
     vesktop
     thunderbird
@@ -37,12 +44,22 @@
     gcc
     clang
     meson
+
+              clang
+              ninja
     gnumake
     nodejs
     pnpm
     pngpaste
     ripgrep
     fd
+    gtksourceview3
+    gtk3
+    glib
+    cmake
+    pkg-config
+    poppler       # Für PDF Vorschau
+    intltool
 
     # Node formatters
     nodePackages.prettier
