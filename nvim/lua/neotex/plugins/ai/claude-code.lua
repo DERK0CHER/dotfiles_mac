@@ -5,45 +5,44 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
-    -- Port range for WebSocket connection
     port_range = { min = 10000, max = 65535 },
-    auto_start = true,     -- Automatically start Claude Code
-    log_level = "info",    -- Logging level
-    
-    -- Terminal configuration
+    auto_start = true,
+    log_level = "warn",
+    track_selection = true,
+    focus_after_send = false,
+
     terminal = {
-      split_side = "right",  -- Open terminal on right side (matches your preference)
-      provider = "native",   -- Use native terminal (or "snacks" if you have it)
-      auto_close = true,     -- Auto-close terminal when Claude Code exits
+      split_side = "right",
+      split_width_percentage = 0.35,
+      provider = "auto",  -- uses snacks if available, falls back to native
+      auto_close = true,
+    },
+
+    diff_opts = {
+      layout = "vertical",
+      open_in_new_tab = false,
+      keep_terminal_focus = false,
+      on_new_file_reject = "close_window",
     },
   },
-  
-  -- NOTE: Key mappings are now defined in which-key.lua under the AI HELP group
-  -- to avoid conflicts with other leader mappings
+
+  -- NOTE: Key mappings are defined in which-key.lua under the AI HELP group
   keys = {},
-  
+
   config = function(_, opts)
     require("claudecode").setup(opts)
-    
-    -- Create additional commands for convenience (maintaining compatibility)
-    vim.api.nvim_create_user_command("ClaudeCodeToggle", function()
-      vim.cmd("ClaudeCode")
-    end, { desc = "Toggle Claude Code terminal" })
-    
-    -- Command to add current buffer to Claude context
+
     vim.api.nvim_create_user_command("ClaudeCodeAddBuffer", function()
       local file = vim.fn.expand("%:p")
       if file ~= "" then
-        vim.cmd("ClaudeCodeAdd " .. file)
+        vim.cmd("ClaudeCodeAdd " .. vim.fn.fnameescape(file))
       else
         require('neotex.util.notifications').ai('No file to add to Claude context', require('neotex.util.notifications').categories.WARNING)
       end
     end, { desc = "Add current buffer to Claude Code context" })
-    
-    -- Command to add current directory to Claude context
+
     vim.api.nvim_create_user_command("ClaudeCodeAddDir", function()
-      local cwd = vim.fn.getcwd()
-      vim.cmd("ClaudeCodeAdd " .. cwd)
+      vim.cmd("ClaudeCodeAdd " .. vim.fn.fnameescape(vim.fn.getcwd()))
     end, { desc = "Add current directory to Claude Code context" })
   end,
 }

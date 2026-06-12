@@ -83,6 +83,9 @@ AI HELP (<leader>h)                             | DESCRIPTION
 <leader>ho - Open Claude Code                   | Toggle Claude Code terminal
 <leader>hb - Add buffer to Claude               | Add current file to Claude context
 <leader>hr - Add directory to Claude            | Add current directory to Claude context
+<leader>hv - Send to Claude                     | Send visual selection to Claude Code
+<leader>hy - Accept diff                        | Accept Claude's proposed changes
+<leader>hq - Deny diff                          | Reject Claude's proposed changes
 <leader>hx - Open MCP Hub                       | Access MCP Hub interface
 <leader>hd - Set model & provider               | Change AI model with defaults
 <leader>he - Edit prompts                       | Open system prompt manager
@@ -489,6 +492,9 @@ return {
       { "<leader>ho", "<cmd>ClaudeCode<CR>", desc = "open claude code", icon = "󰚩" },
       { "<leader>hb", "<cmd>ClaudeCodeAddBuffer<CR>", desc = "add buffer to claude", icon = "󰈙" },
       { "<leader>hr", "<cmd>ClaudeCodeAddDir<CR>", desc = "add directory to claude", icon = "󰉖" },
+      { "<leader>hv", "<cmd>ClaudeCodeSend<CR>", desc = "send to claude", icon = "󰒊", mode = { "n", "v" } },
+      { "<leader>hy", "<cmd>ClaudeCodeDiffAccept<CR>", desc = "accept diff", icon = "󰄬" },
+      { "<leader>hq", "<cmd>ClaudeCodeDiffDeny<CR>", desc = "deny diff", icon = "󰜺" },
       { "<leader>hx", "<cmd>MCPHubOpen<CR>", desc = "open mcp hub", icon = "󰚩" },
       { "<leader>hd", "<cmd>AvanteProvider<CR>", desc = "set model & provider", icon = "󰒕" },
       { "<leader>he", "<cmd>AvantePromptManager<CR>", desc = "edit prompts", icon = "󰏫" },

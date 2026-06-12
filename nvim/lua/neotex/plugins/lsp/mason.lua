@@ -25,7 +25,9 @@ return {
       require("mason-lspconfig").setup({
         -- Only list essential servers to install via mason
         ensure_installed = {
-          "pyright",
+          "pyright",   -- python
+          "lua_ls",    -- lua (needed for editing this config)
+          "texlab",    -- latex
         },
         -- Only install on-demand when needed
         automatic_installation = false,

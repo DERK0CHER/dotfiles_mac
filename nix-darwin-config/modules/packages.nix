@@ -22,6 +22,8 @@ texliveTeTeX
     obsidian
     docker
     docker-compose
+    spotify
+    tor
 
 
     # Browser
@@ -38,7 +40,6 @@ rPackages.rosetta
     # Communication / Mail / etc.
     vesktop
     thunderbird
-    spotify
 
     # Dev tools
     gcc
