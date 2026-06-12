@@ -1,2 +1,9 @@
 gh/*
-tex* 
+tex*
+
+# Nix build result symlink — should never be committed
+result
+nix-darwin-config/result
+
+# WireGuard portal runtime data — contains private keys / admin hash, never commit
+nix-darwin-config/db/
